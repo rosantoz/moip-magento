@@ -1,7 +1,7 @@
-Opensource MoIP Payment Modulo for Magento
+Opensource MoIP Payment Module for Magento
 =================
 
-For further details please visit the module's page on Magento Connect:
+For further details about the module please visit the module's page on Magento Connect:
 
 http://www.magentocommerce.com/magento-connect/developer/rosantoz
 
