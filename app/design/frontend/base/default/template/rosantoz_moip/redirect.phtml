@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title><?php echo $this->getData('frontEndName'); ?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<p>Conectando-se ao MoIP ... Aguarde!</p>
+<form action="https://www.moip.com.br/PagamentoMoIP.do" method="post" name="Form">
+    <input type="hidden" name="id_carteira" value="<?php echo $this->getData('moipAccount') ?>">
+    <input type="hidden" name="valor" value="<?php echo $this->getData('total') ?>">
+    <input type="hidden" name="nome" value="Pedido #<?php echo $this->getData('description') ?>">
+    <input type="hidden" name="descricao" value="Pedido #<?php echo $this->getData('description') ?>">
+    <input type="hidden" name="id_transacao" value="<?php echo $this->getData('transactionId'); ?>">
+    <input type="hidden" name="pagador_nome" value="<?php echo $this->getData('fullName') ?>">
+    <input type="hidden" name="pagador_email" value="<?php echo $this->getData('email') ?>">
+    <input type="hidden" name="pagador_telefone" value="<?php echo $this->getData('telephone') ?>">
+    <input type="hidden" name="pagador_logradouro" value="<?php echo $this->getData('street') ?>">
+    <input type="hidden" name="pagador_cidade" value="<?php echo $this->getData('city') ?>">
+    <input type="hidden" name="pagador_pais" value="BRASIL">
+    <input type="hidden" name="pagador_cep" value="<?php echo $this->getData('postcode') ?>">
+    <!--<input type="hidden" name="pagador_numero" value="">-->
+    <!--<input type="hidden" name="pagador_complemento" value="">-->
+    <!--<input type="hidden" name="pagador_bairro" value="">-->
+    <!--<input type="hidden" name="pagador_estado" value="">-->
+    <script language="JavaScript">document.Form.submit();</script>
+</body>
+</html>

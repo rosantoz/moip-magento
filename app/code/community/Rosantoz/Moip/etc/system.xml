@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <rosantoz_moip translate="label" module="paygate">
+                    <label>Rosantoz Moip</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <comment>
+                        <![CDATA[
+                        <p>
+                            <strong>Module Version: 1.0.0</strong>
+                        </p>
+                        <p>
+                            Developed by Rodrigo dos Santos
+                            (<a href="http://twitter.com/rosantoz" target="_blank">@rosantoz</a>).
+                            Please visit my personal blog at
+                            <a href="http://rodrigodossantos.ws" target="_blank">
+                            http://rodrigodossantos.ws</a>
+                        </p>
+                        <p>
+                            For instant payment notification, access your MoIP account and go to
+                            Meus Dados >> Preferências >> Notificação das transações.
+                            Check "Receber notificação instantânea de transação" and insert your callback URL:
+                            http://YOUR_MAGENTO_URL/rosantoz_moip/payment/callback
+                        </p>
+                        <p>
+                            If you want to contribute with this project, access its github repository at
+                            <a href="https://github.com/rosantoz/moip-magento" target="_blank">
+                                https://github.com/rosantoz/moip-magento
+                            </a>
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>Versão do Módulo: 1.0.0</strong>
+                        </p>
+                        <p>
+                            Desenvolvido por Rodrigo dos Santos
+                            (<a href="http://twitter.com/rosantoz" target="_blank">@rosantoz</a>).
+                            Visite meu blog pessoal em
+                            <a href="http://rodrigodossantos.ws" target="_blank">
+                            http://rodrigodossantos.ws</a>
+                        </p>
+                        <p>
+                            Para configurar o retorno automático, acesse sua conta MoIP e vá em
+                            Meus Dados >> Preferências >> Notificação das transações.
+                            Marque "Receber notificação instantânea de transação" e insira sua URL de retorno:
+                            http://YOUR_MAGENTO_URL/rosantoz_moip/payment/callback
+                        </p>
+                        <p>
+                            Caso queira contribuir com este projeto, acesse o repositório no github
+                            <a href="https://github.com/rosantoz/moip-magento" target="_blank">
+                                https://github.com/rosantoz/moip-magento
+                            </a>
+                        </p>
+                        ]]>
+                    </comment>
+                    <fields>
+                        <active translate="label">
+                            <label>Habilitado</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <title translate="label">
+                            <label>Nome de Exibição</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <account>
+                            <label>Conta Moip</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account>
+                        <approved_payment_order_status translate="label">
+                            <label>Status para compras aprovadas</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </approved_payment_order_status>
+                        <cancelled_payment_order_status>
+                            <label>Status para compras canceladas</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cancelled_payment_order_status>
+                    </fields>
+                </rosantoz_moip>
+            </groups>
+        </payment>
+    </sections>
+</config>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Rosantoz_Moip>
+            <version>1.0.0</version>
+        </Rosantoz_Moip>
+    </modules>
+
+    <global>
+        <blocks>
+            <rosantoz_moip>
+                <class>Rosantoz_Moip_Block</class>
+            </rosantoz_moip>
+
+            <payment>
+                <rewrite>
+                    <info>Rosantoz_Moip_Block_Payment_Info</info>
+                </rewrite>
+            </payment>
+
+        </blocks>
+
+        <models>
+            <rosantoz_moip>
+                <class>Rosantoz_Moip_Model</class>
+            </rosantoz_moip>
+        </models>
+
+        <helpers>
+            <rosantoz_moip>
+                <class>Rosantoz_Moip_Helper</class>
+            </rosantoz_moip>
+        </helpers>
+
+        <resources>
+            <rosantoz_moip_setup>
+                <setup>
+                    <module>Rosantoz_Moip</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </rosantoz_moip_setup>
+            <rosantoz_moip_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </rosantoz_moip_write>
+            <rosantoz_moip_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </rosantoz_moip_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <rosantoz_moip>
+                <active>0</active>
+                <model>rosantoz_moip/Moip</model>
+                <order_status>pending</order_status>
+                <title>Rosantoz Moip</title>
+                <payment_action>sale</payment_action>
+                <allowspecific>0</allowspecific>
+            </rosantoz_moip>
+        </payment>
+    </default>
+
+    <frontend>
+        <routers>
+            <rosantoz_moip>
+                <use>standard</use>
+                <args>
+                    <module>Rosantoz_Moip</module>
+                    <frontName>rosantoz_moip</frontName>
+                </args>
+            </rosantoz_moip>
+        </routers>
+    </frontend>
+
+
+</config>
